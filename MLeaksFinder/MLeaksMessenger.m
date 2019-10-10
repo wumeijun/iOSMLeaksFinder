@@ -29,9 +29,12 @@ static NSString * leakSavePath =  @"http://qm.soulapp-inc.cn/api/vulpix/vulpix_v
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:additionalButtonTitle, nil];
     
-//    [alertViewTemp show];
-//    alertView = alertViewTemp;
+    [alertViewTemp show];
+    alertView = alertViewTemp;
     NSString *className = [self getClassName:message];
+    if ([className isEqualToString:@"Failtofindaretaincycle"]) {
+        return;
+    }
     
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *appVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
