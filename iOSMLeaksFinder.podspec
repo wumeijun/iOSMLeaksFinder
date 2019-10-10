@@ -94,6 +94,7 @@ Pod::Spec.new do |spec|
   #spec.exclude_files = "Classes/Exclude"
 
   spec.public_header_files = "MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h"
+  spec.dependency 'FBRetainCycleDetector'
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
